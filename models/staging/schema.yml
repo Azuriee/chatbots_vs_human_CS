@@ -1,0 +1,20 @@
+
+version: 2
+
+sources: 
+  - name : raw
+    database : ai-chatbots-vs-human-agent
+    schema : raw_data
+    tables: 
+      - name : ai_company
+        identifier: ai_company_raw
+        description: data from the company using chatbots 
+        columns:
+          - name: interaction_id
+
+      - name: trad_company
+        identifier: trad_company_raw
+        description: data from the company without chatbots
+
+      - name: general_AI_survey
+        description: survey about IA use in ecommerce
