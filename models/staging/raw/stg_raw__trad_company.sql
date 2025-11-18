@@ -9,26 +9,20 @@ source as (
 renamed as (
 
     select
-        unique id,
+        unique_id,
         channel_name,
         category,
-        sub-category,
-        customer remarks,
+        sub_category,
         order_id,
         order_date_time,
-        issue_reported at,
+        issue_reported_at,
         issue_responded,
         survey_response_date,
         customer_city,
         product_category,
         item_price,
-        connected_handling_time,
         agent_name,
-        supervisor,
-        manager,
-        tenure bucket,
-        agent shift,
-        csat score
+        csat
 
     from source
 
