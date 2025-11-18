@@ -17,4 +17,5 @@ sources:
         description: data from the company without chatbots
 
       - name: general_AI_survey
+        identifier: general_IA_survey_raw
         description: survey about IA use in ecommerce
