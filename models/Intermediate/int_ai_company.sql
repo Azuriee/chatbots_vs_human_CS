@@ -15,5 +15,3 @@ SELECT
     , device_type
     ,CAST( follow_up_required AS INT64) AS follow_up_required
 FROM {{ ref('stg_raw__ai_company') }}
-
-
