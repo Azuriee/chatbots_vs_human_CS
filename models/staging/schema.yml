@@ -13,7 +13,7 @@ sources:
           - name: interaction_id
 
       - name: trad_company
-        identifier: trad_company_raw
+        identifier: trad_company_columns_clean
         description: data from the company without chatbots
 
       - name: general_AI_survey
