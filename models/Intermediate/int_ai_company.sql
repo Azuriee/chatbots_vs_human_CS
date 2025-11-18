@@ -54,14 +54,15 @@ FROM {{ ref('stg_raw__ai_company') }}
 
 ----- Average customer_sat by handled_by---- 
 SELECT 
-    handled_by
+    region
+    , handled_by
     , ROUND(AVG(customer_sentiment),2) AS cust_sent
     , ROUND(AVG(interaction_cost_usd),2)  AS avg_int_cost
     , ROUND(AVG(response_time_min),2) AS resp_time 
     , ROUND(AVG(customer_satisfaction),2) AS c_sat
 FROM {{ ref('stg_raw__ai_company') }}
-GROUP BY handled_by
+GROUP BY region, handled_by
 ---The c_sat gap is nor very big between human agents and AI agents, only 0.05 difference, but thhe response time of AI is muchh faster ( 1.51 vs 7.05 min )
--- Checking cost of human interactions 
+-- Customer sentime
 
 
