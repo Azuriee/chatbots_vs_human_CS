@@ -14,7 +14,8 @@ WITH date_clean AS (
     product_category,
     item_price,
     agent_name,
-    csat
+    csat,
+    tenure_bucket
 FROM {{ ref('stg_raw__trad_company') }}
 )
 , 
@@ -43,7 +44,8 @@ base_raw AS (
         product_category,
         item_price,
         agent_name,
-        csat
+        csat,
+        tenure_bucket
     FROM cat
 )
 ,
@@ -57,6 +59,10 @@ base_with_avg AS (
 
 -- REPLACE THE NEGATIVE RESPONSE TIME VALUES WITH THE AVG RESPONSE TIME VALUES
 SELECT
+    unique_id,
+    channel_name,
+    category, 
+    sub_category,
     order_id,
     order_date,
     issue_reported_at,
@@ -65,8 +71,13 @@ SELECT
         when response_time < 0 then ROUND (avg_positive_response_time, 1)
         else response_time
         end as response_time,
+    survey_response_date,
     customer_city,
     product_category,
-    item_price
+    item_price,
+    agent_name,
+    csat,
+    tenure_bucket
 
 FROM base_with_avg
+
