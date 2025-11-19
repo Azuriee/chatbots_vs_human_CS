@@ -80,3 +80,4 @@ SELECT
     tenure_bucket
 
 FROM base_with_avg
+
