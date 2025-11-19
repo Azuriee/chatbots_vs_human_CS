@@ -22,7 +22,8 @@ renamed as (
         product_category,
         item_price,
         agent_name,
-        csat
+        csat,
+        tenure_bucket
 
     from source
 
