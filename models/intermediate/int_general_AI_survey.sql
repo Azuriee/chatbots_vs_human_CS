@@ -10,7 +10,10 @@ SELECT
     , CAST(ai_endorsement AS INT64) AS ai_endorsement
     , CAST(ai_privacy_no_trust AS INT64) AS ai_privacy_no_trust
     , CAST(ai_enhance_experience AS INT64) AS ai_enhance_experience
-    , ai_satisfication
+    , CASE 
+        WHEN ai_satisfication = 'Satisfied' THEN 1
+        ELSE 0
+    END AS ai_satisfication_1_0
     , CAST(ai_tools_used_chatbots AS INT64) AS ai_tools_used_chatbots
 
 FROM {{ ref('stg_raw__general_AI_survey') }}
