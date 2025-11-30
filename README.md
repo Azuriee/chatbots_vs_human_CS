@@ -1,4 +1,4 @@
-# 🛠️ Customer Service Analytics — dbt · BigQuery · Looker Studio  
+# 📊 Customer Service Analytics — dbt · BigQuery · Looker Studio 📊
 ### AI Chatbots vs Human Agents — Strategic Insights & Hybrid Support Recommendation  
 **Team : Alexandra Merli, Inês Merce, Fabiana Barahona, Elise Gonthier**
 
@@ -92,6 +92,13 @@ Final mart models include:
 
 ## 📊 Dashboard Summary (Looker Studio)
 
+<p align="center">
+  <img src="dashboard/shopzilla_overview.png" width="45%" />
+  <img src="dashboard/market_overview.png" width="45%" />
+</p>
+
+
+
 ### 1. Performance — AI vs Human
 - Equivalent CSAT between AI and Humans
 - AI response time: **1.5–4.3 minutes**  
@@ -122,6 +129,8 @@ Final mart models include:
 ---
 
 ## 🎯 Final Recommendation — Hybrid Support Model
+
+<img src="dashboard/recommendations.png" width="400px" />
 
 ### Use AI for:
 - Password resets  
